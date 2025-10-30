@@ -13,7 +13,6 @@ class UpperCaseStringsTest {
     fun testConstructorConvertsToUpper() {
         val str = UpperCaseStrings("test")
         val result = str.sort()
-        // Перевіряємо що всі букви великі
         assertTrue(result.all { it.isUpperCase() || !it.isLetter() })
     }
 

@@ -1,5 +1,4 @@
-open class Strings(private var text: String) {
-
+open class Strings(protected var text: String) {
     val length: Int
         get() = text.length
 

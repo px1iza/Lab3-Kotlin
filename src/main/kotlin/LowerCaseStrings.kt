@@ -1,10 +1,14 @@
-class LowerCaseStrings(text: String) : Strings(text) {
-
-    private val lowerText: String = text.lowercase()
+class LowerCaseStrings(text: String) : Strings(text.lowercase()) {
 
     override fun sort(): String {
         return try {
-            val sorted = lowerText.toCharArray().sortedDescending().joinToString("")
+            // Сортуємо букви за спаданням у звичайному алфавітному порядку
+            val sorted = super.text
+                .lowercase()
+                .toCharArray()
+                .sortedByDescending { it }
+                .joinToString("")
+
             println("Малі букви (за спаданням): $sorted")
             sorted
         } catch (e: Exception) {

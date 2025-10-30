@@ -13,7 +13,6 @@ class LowerCaseStringsTest {
     fun testConstructorConvertsToLower() {
         val str = LowerCaseStrings("TEST")
         val result = str.sort()
-        // Перевіряємо що всі букви малі
         assertTrue(result.all { it.isLowerCase() || !it.isLetter() })
     }
 
@@ -28,6 +27,6 @@ class LowerCaseStringsTest {
     fun testSortWithMixedCase() {
         val str = LowerCaseStrings("JaVa")
         val result = str.sort()
-        assertEquals("vaja", result)
+        assertEquals("vjaa", result) // правильний результат за спаданням
     }
 }
